@@ -4,21 +4,21 @@ class Calculadora:
     def __init__(self):
         pass
     
-    def soma(self, n1:int, n2:int):
+    def somar(self, n1:int, n2:int):
         return n1 + n2
     
-    def sub(self, n1:int, n2:int):
+    def subtrair(self, n1:int, n2:int):
         return n1 - n2
     
-    def mult(self, n1:int, n2:int):
+    def multiplicar(self, n1:int, n2:int):
         return n1 * n2
     
-    def divi(self, n1:int, n2:int):
+    def dividir(self, n1:int, n2:int):
         if n2 == 0 or n1 == 0:
-            return "Erro: divisão por zero."
+            raise ZeroDivisionError('Divisão Por Zero')
         return n1 / n2
     
-    def porcent(self, valor:int, percentual:int):
+    def porcentagem(self, valor:int, percentual:int):
         return (valor * percentual) / 100
     
     def raiz_quadrada(self, n1:int):
@@ -27,11 +27,8 @@ class Calculadora:
     def potenciacao(self, base:int, expoente:int):
         return base ** expoente
     
-    def confirmar_str(self,a:str):
-        return a
-    
-    def confirmar_none(self, b:None):
-        return b
+    def logaritmo(self, log, base):
+        return math.log(log,base)
 
-    def sla(self):
-        pass
+cal = Calculadora()
+print(cal.dividir(2,0))
