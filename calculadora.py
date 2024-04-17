@@ -32,3 +32,6 @@ class Calculadora:
     
     def confirmar_none(self, b:None):
         return b
+
+    def sla(self):
+        pass
